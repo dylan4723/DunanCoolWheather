@@ -1,6 +1,7 @@
 package com.dunancoolwheather.app.activity;
 
 import com.dunancoolwheather.app.R;
+import com.dunancoolwheather.app.service.AutoUpdateService;
 import com.dunancoolwheather.app.util.HttpCallbackListener;
 import com.dunancoolwheather.app.util.HttpUtil;
 import com.dunancoolwheather.app.util.Utility;
@@ -169,6 +170,9 @@ queryWeatherInfo(weatherCode);
 	currentDateText.setText(prefs.getString("current_date", ""));
 	weatherInfoLayout.setVisibility(View.VISIBLE);
 	cityNameText.setVisibility(View.VISIBLE);
+	
+	Intent intent = new Intent(this, AutoUpdateService.class);
+	startService(intent);
 	}
 	 
  

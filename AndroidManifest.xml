@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.dunancoolwheather.app.activity.WeatherActivity"></activity>
+        <service android:name="com.dunancoolwheather.app.service.AutoUpdateService"></service>
+        <receiver android:name="com.dunancoolwheather.app.receiver.AutoUpdateReceiver"></receiver>
     </application>
 
 </manifest>
